@@ -4,6 +4,10 @@ from flask import Flask
 
 app = Flask(__name__)
 
+@app.route("/")
+def in_the_beginning():
+    return "This is the root. Visit '<heroku app name>/hello' to get started"
+
 @app.route("/hello")
 def hello_world():
 	return "Hello World"
