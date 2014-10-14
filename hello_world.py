@@ -1,3 +1,5 @@
+
+import os
 from flask import Flask
 
 app = Flask(__name__)
@@ -13,11 +15,11 @@ def hello_person(name):
             Hello {}!
         </h1>
         <p>
-            Here's a picture of a kitten.  Awww...
+            Here's a random picture from the internet.  Flask and Heroku appear to work.
         </p>
-        <img src="http://placekitten.com/200/300">
-    """
-    return html.format(name.title())
+        <img src="https://allcutegirls.files.wordpress.com/2009/10/sririta-jensen-24-cute-girls.jpg"/>
+        """.format(name)
+    return html
 
 if __name__ == "__main__":
 	app.run()
